@@ -232,4 +232,38 @@
         setPlayingUI(false);
     });
 
+    /* =====================================================
+   ANIMASI MASUK MAP CARD
+===================================================== */
+
+    const mapCard = document.querySelector(".map-card");
+
+    if (mapCard) {
+
+        /* Aktifkan kondisi awal animasi */
+        mapCard.classList.add("map-animate");
+
+        const mapObserver = new IntersectionObserver(
+            function (entries, observer) {
+
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+
+                        mapCard.classList.add("is-visible");
+
+                        /* Animasi cukup sekali */
+                        observer.unobserve(mapCard);
+                    }
+                });
+            },
+            {
+                threshold: 0.2,
+                rootMargin: "0px 0px -8% 0px"
+            }
+        );
+
+        mapObserver.observe(mapCard);
+    }
+
 })();

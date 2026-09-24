@@ -1711,5 +1711,328 @@ body.page-one-locked {
         font-size: clamp(0.95rem, 1.35vw, 1.25rem);
         line-height: 1.65;
     }
+}
 
+/* =========================================================
+   COVER - RESPONSIVE MOBILE
+   Center content berdasarkan viewport asli perangkat
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /*
+       Gunakan small viewport agar ukuran cover stabil
+       ketika Safari / browser mobile menampilkan toolbar.
+    */
+    .invitation-cover {
+        height: 100svh;
+        min-height: 100svh;
+    }
+
+
+    /*
+       Menjadi reference untuk absolute center.
+       Dekorasi atas tetap mengikuti layout yang sekarang.
+    */
+    .cover-inner {
+        position: relative;
+
+        width: 100%;
+        height: 100%;
+        max-height: none;
+
+        padding-top: clamp(28px, 5svh, 42px);
+        padding-right: clamp(18px, 5vw, 24px);
+        padding-bottom: clamp(28px, 5svh, 42px);
+        padding-left: clamp(18px, 5vw, 24px);
+    }
+
+
+    /*
+       Seluruh cluster:
+       Undangan Wisuda
+       Nama
+       Gelar
+       Tanggal
+       Button
+
+       selalu berada tepat di tengah layar.
+    */
+    .cover-center {
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        width: calc(100% - 40px);
+        max-width: 440px;
+
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /*
+       Nama tetap responsive terhadap lebar HP.
+       Tidak bergantung pada model iPhone tertentu.
+    */
+    .cover-name {
+        width: 100%;
+
+        font-size: clamp(1.8rem,
+                8.8vw,
+                2.8rem);
+
+        line-height: 1.08;
+    }
+
+
+    .cover-badge {
+        font-size: clamp(0.66rem,
+                2.8vw,
+                0.90rem);
+    }
+
+
+    .cover-degree {
+        font-size: clamp(0.70rem,
+                2.9vw,
+                0.98rem);
+    }
+
+
+    .cover-date-text {
+        font-size: clamp(0.74rem,
+                3vw,
+                1rem);
+    }
+
+
+    .btn-open-invitation {
+        max-width: 100%;
+
+        padding:
+            clamp(11px, 3vw, 13px) clamp(24px, 8vw, 34px);
+
+        font-size: clamp(0.72rem,
+                2.9vw,
+                0.92rem);
+    }
+}
+
+
+/* =========================================================
+   COVER - HP SANGAT KECIL / LAYAR PENDEK
+   Contoh: iPhone SE, Android compact
+========================================================= */
+
+@media (max-width: 360px) and (max-height: 700px) {
+
+    .cover-name {
+        font-size: clamp(1.65rem,
+                8.2vw,
+                2.1rem);
+    }
+
+    .cover-degree {
+        margin-bottom: 14px;
+    }
+
+    .cover-date-text {
+        margin-bottom: 18px;
+    }
+
+    .btn-open-invitation {
+        min-height: 42px;
+        padding: 10px 24px;
+    }
+}
+
+/* =========================================================
+   PAGE 1 - MOBILE MATCH CANVA
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .page-one {
+        min-height: 100svh;
+        height: 100svh;
+    }
+
+
+    /* SELURUH GRUP TEXT */
+    .page-one-content {
+        position: absolute;
+
+        inset: auto 0 auto 0;
+        top: 62.5%;
+
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .wisuda-title,
+    .event-info {
+        position: static;
+        top: auto;
+        left: auto;
+    }
+
+    /* =========================
+       WISUDA
+    ========================= */
+
+    .wisuda-title {
+        width: 100%;
+        margin: 0;
+
+        font-family: "Sego", serif;
+
+        font-size: clamp(4.3rem,
+                20.5cqw,
+                6.2rem);
+
+        line-height: 0.90;
+        letter-spacing: -0.045em;
+        white-space: nowrap;
+
+        /* turun sedikit */
+        transform: translateY(clamp(8px, 2cqw, 11px));
+    }
+
+
+    /* =========================
+       TANGGAL + TEMPAT
+    ========================= */
+
+    .event-info {
+        width: 62%;
+        max-width: 285px;
+
+        margin-top: clamp(14px,
+                3.5cqw,
+                18px);
+
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 0.60fr) auto minmax(0, 1fr);
+
+        align-items: center;
+        column-gap: 7%;
+
+        transform: none;
+    }
+
+
+    .event-date,
+    .event-location {
+        font-family: "Balgin", sans-serif;
+
+        font-size: clamp(0.56rem,
+                2.43cqw,
+                0.78rem);
+
+        line-height: 1.25;
+    }
+
+
+    .separator {
+        width: 1.5px;
+
+        height: clamp(30px,
+                8cqw,
+                40px);
+    }
+}
+
+
+/* =========================================================
+   HP DENGAN LAYAR PENDEK
+========================================================= */
+
+@media (max-width: 768px) and (max-height: 700px) {
+
+    .page-one-content {
+        top: 60.5%;
+    }
+
+    .wisuda-title {
+        font-size: clamp(3.7rem,
+                19cqw,
+                5rem);
+
+        transform: translateY(clamp(4px, 1.2cqw, 6px));
+    }
+}
+
+/* =========================================================
+   PAGE 2 - TEXT ALIGNMENT ONLY
+   Garis tidak diubah
+========================================================= */
+
+/* Angka 26 turun sedikit agar tepat di tengah
+   antara September dan 2026 */
+.date-number {
+    transform: translateY(2px);
+}
+
+
+/* Sabtu dan 12.30 WIB turun sedikit
+   agar optically center di antara dua garis */
+.date-side-text {
+    transform: translateY(2px);
+}
+
+/* =========================================================
+   MAP CARD - SMOOTH REVEAL ANIMATION
+========================================================= */
+
+.map-card.map-animate {
+    opacity: 0;
+
+    transform:
+        translateY(26px) scale(0.985);
+
+    filter: blur(3px);
+
+    transition:
+        opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 0.9s ease;
+
+    will-change: opacity, transform, filter;
+}
+
+.map-card.map-animate.is-visible {
+    opacity: 1;
+
+    transform:
+        translateY(0) scale(1);
+
+    filter: blur(0);
+}
+
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    .map-card.map-animate {
+        opacity: 1;
+        transform: none;
+        filter: none;
+        transition: none;
+    }
 }
