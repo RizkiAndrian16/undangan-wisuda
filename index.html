@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Undangan Wisuda Rizki Andrian</title>
+
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="cover-active">
+
+    <!-- LAYAR SAMPUL (COVER SCREEN) -->
+    <div id="invitationCover" class="invitation-cover">
+        <div class="cover-inner">
+
+            <!-- Dekorasi Atas -->
+            <div class="cover-top-decoration">
+                <span class="cover-line"></span>
+
+                <svg class="cover-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 22L32 10L60 22L32 34L4 22Z" fill="white" />
+                    <path d="M16 28V40C16 47 23 52 32 52C41 52 48 47 48 40V28" fill="none" stroke="white"
+                        stroke-width="4" />
+                    <path d="M56 24V42" stroke="white" stroke-width="4" />
+                </svg>
+
+                <span class="cover-line"></span>
+            </div>
+
+            <!-- Bagian Utama: Judul, Nama Wisudawan, Tanggal & Tombol Buka Undangan -->
+            <div class="cover-center">
+                <p class="cover-badge">Undangan Wisuda</p>
+                <h1 class="cover-name">Rizki Andrian S.Tr.Kom</h1>
+                <p class="cover-degree">Sarjana Terapan Komputer</p>
+
+                <p class="cover-date-text">Sabtu, 26 September 2026</p>
+
+                <button id="openInvitationBtn" class="btn-open-invitation" type="button"
+                    aria-label="Buka Undangan dan Putar Musik">
+                    <svg class="btn-open-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3 7.5L12 13.5L21 7.5M3 6H21C21.5523 6 22 6.44772 22 7V17C22 17.5523 21.5523 18 21 18H3C2.44772 18 2 17.5523 2 17V7C2 6.44772 2.44772 6 3 6Z"
+                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Buka Undangan</span>
+                </button>
+            </div>
+
+            <!-- Penyeimbang Bawah agar posisi tengah benar-benar optis -->
+            <div class="cover-bottom-spacer"></div>
+
+        </div>
+    </div>
+
+    <main class="invitation">
+
+        <!-- HALAMAN 1 -->
+        <section class="page page-one">
+
+            <div class="top-decoration">
+                <span class="line"></span>
+
+                <svg class="graduation-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 22L32 10L60 22L32 34L4 22Z" fill="white" />
+                    <path d="M16 28V40C16 47 23 52 32 52C41 52 48 47 48 40V28" fill="none" stroke="white"
+                        stroke-width="4" />
+                    <path d="M56 24V42" stroke="white" stroke-width="4" />
+                </svg>
+
+                <span class="line"></span>
+            </div>
+
+            <div class="page-one-content">
+
+                <h2 class="graduate-name">
+                    Rizki Andrian S.Tr.Kom
+                </h2>
+
+                <h1 class="wisuda-title">
+                    Wisuda
+                </h1>
+
+                <div class="event-info">
+
+                    <div class="event-date">
+                        <span>26 September</span>
+                        <span>2026</span>
+                    </div>
+
+                    <div class="separator"></div>
+
+                    <div class="event-location">
+                        <span>Gedung PKM</span>
+                        <span>Politeknik Negeri Padang</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- TOMBOL LIHAT DETAIL -->
+            <a href="#pageTwo" id="btnSeeDetails" class="btn-see-details" aria-label="Lihat Detail Acara">
+                <span>Lihat Detail</span>
+                <svg class="see-details-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+
+        </section>
+
+
+        <!-- HALAMAN 2 -->
+        <section id="pageTwo" class="page page-two">
+
+            <!-- Dekorasi atas -->
+            <div class="page-two-decoration">
+                <span class="page-two-line"></span>
+
+                <svg class="page-two-graduation-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+
+                    <path d="M4 22L32 10L60 22L32 34L4 22Z" fill="white" />
+
+                    <path d="M16 28V40C16 47 23 52 32 52C41 52 48 47 48 40V28" fill="none" stroke="white"
+                        stroke-width="4" />
+
+                    <path d="M56 24V42" stroke="white" stroke-width="4" />
+
+                </svg>
+
+                <span class="page-two-line"></span>
+            </div>
+
+
+            <!-- Tiga foto -->
+            <div class="photo-strip">
+
+                <div class="graduation-photo photo-left">
+                    <img src="./assets/lihat.jpeg" alt="Foto wisuda Rizki">
+                </div>
+
+                <div class="graduation-photo photo-center">
+                    <img src="./assets/fokus.jpeg" alt="Detail selempang wisuda Rizki">
+                </div>
+
+                <div class="graduation-photo photo-right">
+                    <img src="./assets/lengah.jpeg" alt="Foto wisuda Rizki">
+                </div>
+
+            </div>
+
+
+            <!-- Kalimat undangan -->
+            <p class="invitation-message">
+                Sebuah kehormatan bagi saya apabila<br>
+                berkenan hadir merayakan momen wisuda
+            </p>
+
+
+            <!-- Nama -->
+            <h2 class="page-two-name">
+                Rizki Andrian S.Tr.Kom
+            </h2>
+
+            <p class="page-two-degree">
+                Sarjana Terapan Komputer
+            </p>
+
+            <!-- Informasi acara -->
+            <div class="page-two-date">
+
+                <!-- Hari -->
+                <div class="date-side date-day">
+                    <span class="date-line"></span>
+
+                    <span class="date-side-text">
+                        Sabtu
+                    </span>
+
+                    <span class="date-line"></span>
+                </div>
+
+
+                <!-- Tanggal -->
+                <div class="date-center">
+                    <span class="date-month">
+                        September
+                    </span>
+
+                    <span class="date-number">
+                        26
+                    </span>
+
+                    <span class="date-year">
+                        2026
+                    </span>
+                </div>
+
+
+                <!-- Jam -->
+                <div class="date-side date-time">
+                    <span class="date-line"></span>
+
+                    <span class="date-side-text">
+                        12.30 WIB
+                    </span>
+
+                    <span class="date-line"></span>
+                </div>
+
+            </div>
+
+            <!-- Lokasi Acara -->
+            <div class="map-section">
+
+                <h3 class="map-heading">
+                    Lokasi Acara
+                </h3>
+
+                <div class="map-card">
+                    <iframe src="https://www.google.com/maps?q=Politeknik+Negeri+Padang&z=16&output=embed"
+                        loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+                        title="Politeknik Negeri Padang">
+                    </iframe>
+                </div>
+
+                <a class="map-button" href="https://www.google.com/maps/search/?api=1&query=Politeknik+Negeri+Padang"
+                    target="_blank" rel="noopener noreferrer">
+                    Buka Google Maps
+                </a>
+
+                <p class="thank-you">
+                    Terima kasih atas doa dan<br>
+                    kehadirannya
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- MUSIK -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="./assets/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicToggle" class="music-toggle" type="button" aria-label="Putar musik" aria-pressed="false">
+        <svg class="icon-note" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 18V5.6L20 3.5V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.6" />
+            <circle cx="17" cy="16" r="3" stroke="currentColor" stroke-width="1.6" />
+        </svg>
+
+        <span class="icon-eq">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+    </button>
+    <script src="./script.js"></script>
+</body>
+
+</html>
